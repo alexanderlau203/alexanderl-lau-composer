@@ -4,12 +4,16 @@ import { Navigate } from 'react-router';
 import styled from 'styled-components';
 
 const HeaderSection = styled.div`
+  position: fixed;
+  background-color: white;
+  width: 100%;
+`
+
+const HeaderWrapper = styled.div`
   padding: 15px 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  background-color: white;
 `
 
 const Logo = styled.div`
@@ -50,19 +54,21 @@ const NavLink = styled(Link)`
 const Header = () => {
   return (
     <HeaderSection>
-      {/* Logo */}
-      <Logo onClick={<Navigate to="" />}>
-        <LogoTitle>Alexander Lau</LogoTitle>
-        <div>Composer</div>
-      </Logo>
+      <HeaderWrapper>
+        {/* Logo */}
+        <Logo onClick={<Navigate to="" />}>
+          <LogoTitle>Alexander Lau</LogoTitle>
+          <div>Composer</div>
+        </Logo>
 
-      {/* Navbar */}
-      <NavBar>
-        <NavLink to="">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/compositions">Compositions</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </NavBar>
+        {/* Navbar */}
+        <NavBar>
+          <NavLink to="">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/compositions">Compositions</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </NavBar>
+      </HeaderWrapper>
     </HeaderSection>
   );
 }

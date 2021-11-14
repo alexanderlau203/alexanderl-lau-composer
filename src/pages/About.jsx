@@ -6,45 +6,6 @@ import Footer from '../components/Footer';
 import PrimaryButton from '../components/PrimaryButton';
 import { Navigate } from 'react-router';
 
-const CoverPhoto = styled.img`
-  width: 100%;
-  height: 550px;
-  object-fit: cover;
-`
-
-const CoverPhotoText = styled.div`
-  position: absolute;
-  width: 300px;
-  color: white;
-  top: 300px;
-  left: 150px;
-`
-
-const CoverPhotoTitle = styled.div`
-  font-size: 20pt;
-`
-
-const BodyWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin: auto;
-  margin-top: 100px;
-`
-
-const BodyText = styled.p`
-  margin: auto;
-  text-align: justify;
-  line-height: 27px;
-`
-
-const MoreInfoButton = styled(PrimaryButton)`
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  width: 150px;
-`
-
 const Home = () => {
   const [toAbout, setToAbout] = React.useState(false)
 

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const FooterSection = styled.div`
   height: 100px;
-  position: absolute;
   bottom: 0px;
   width: 100vw;
 `
