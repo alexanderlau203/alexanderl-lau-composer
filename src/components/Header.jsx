@@ -52,18 +52,24 @@ const NavLink = styled(Link)`
 `
 
 const Header = () => {
+  const [toHome, setToHome] = React.useState(false)
+
+  if (toHome) {
+    return <Navigate to="/" />
+  }
+
   return (
     <HeaderSection>
       <HeaderWrapper>
         {/* Logo */}
-        <Logo onClick={<Navigate to="" />}>
+        <Logo onClick={() => setToHome(true)}>
           <LogoTitle>Alexander Lau</LogoTitle>
           <div>Composer</div>
         </Logo>
 
         {/* Navbar */}
         <NavBar>
-          <NavLink to="">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/compositions">Compositions</NavLink>
           <NavLink to="/contact">Contact</NavLink>
