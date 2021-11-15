@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/Header'
 import styled from 'styled-components';
 import AboutImage from '../assets/About.JPG';
-import { Link } from 'react-router-dom';
+import { MainTitle } from '../components/PageTitles';
 
 const Body = styled.div`
   display: flex;
@@ -24,14 +24,6 @@ const AboutWrapper = styled.div`
   padding: 50px 110px
 `
 
-const Title = styled.h1`
-  font-size: 30pt;
-`
-
-const ExtLink = styled.a`
-
-`
-
 const About = () => {
   return (
     <section id="about">
@@ -43,7 +35,7 @@ const About = () => {
         />
         <AboutSection>
           <AboutWrapper>
-            <Title>About</Title>
+            <MainTitle>About</MainTitle>
             <p>Hello! I’m Alex.</p>
             <p>
               I’m a  contemporary, classical composer. I was born in Sydney, Australia and attended 

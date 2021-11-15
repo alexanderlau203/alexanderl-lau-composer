@@ -60,7 +60,7 @@ const Home = () => {
       <div>
         <CoverPhotoText>
           <CoverPhotoTitle>Alexander Lau</CoverPhotoTitle>
-          <div>Australian-born, contemporary, classical composer and violinist</div>
+          <div>Australian-born, contemporary, classical composer and violinist.</div>
         </CoverPhotoText>
         <CoverPhoto src={HomeImage}/>
       </div>
