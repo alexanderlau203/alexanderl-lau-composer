@@ -40,24 +40,30 @@ export const TextInputGroup = (props) => {
   return (
     <InputGroup className={props.className}>
       <label>{props.label}</label>
-      <TextBox />
+      <TextBox onChange={(e) => props.onChange(e.target.value)}/>
     </InputGroup>
   );
 }
 
 TextInputGroup.propTypes = {
-  label: PropTypes.string
+  label: PropTypes.string,
+  onChange: PropTypes.func
 } 
 
 export const TextAreaGroup = (props) => {
   return (
     <InputGroup className={props.className}>
       <label>{props.label}</label>
-      <TextArea cols="40" rows="5" name="description" wrap="physical"></TextArea>
+      <TextArea cols="40" 
+        rows="5" 
+        wrap="physical"
+        onChange={(e) => props.onChange(e.target.value)}
+      ></TextArea>
     </InputGroup>
   );
 }
 
 TextAreaGroup.propTypes = {
-  label: PropTypes.string
+  label: PropTypes.string,
+  onChange: PropTypes.func
 } 

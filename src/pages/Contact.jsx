@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { MainTitle } from '../components/PageTitles';
 import { TextInputGroup, TextAreaGroup } from '../components/FormGroup';
 import CoverPhoto from '../assets/Contact.jpeg';
+console.log(process.env)
 
 const Body = styled.div`
   display: flex;
@@ -47,6 +48,15 @@ const PhotoWrapper = styled.div`
 `
 
 const Contact = () => {
+  const [name, setName] = React.useState('')
+  const [email, setEmail] = React.useState('')
+  const [subject, setSubject] = React.useState('')
+  const [message, setMessage] = React.useState('')
+
+  React.useEffect(() => {
+    console.log(name)
+  }, [name])
+
   return (
     <section id="contact">
       <Header />
@@ -67,10 +77,18 @@ const Contact = () => {
 
               {/* Text inputs */}
               <Form>
-                <TextInputGroup label="Name *"/>
-                <TextInputGroup label="Email *"/>
-                <TextInputGroup label="Subject *"/>
-                <TextAreaGroup label="Message *" />
+                <TextInputGroup label="Name *"
+                  onChange={setName}
+                />
+                <TextInputGroup label="Email *"
+                  onChange={setEmail}
+                />
+                <TextInputGroup label="Subject *"
+                  onChange={setSubject}
+                />
+                <TextAreaGroup label="Message *" 
+                  onChange={setMessage}
+                />
               </Form>
             </FormWrapper>
           </ContactForm>
