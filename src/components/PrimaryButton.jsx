@@ -12,12 +12,14 @@ const Button = styled.button`
     font-family: 'Open Sans', sans-serif;
     border: 0px;
     font-weight: bold;
+    width: fit-content;
+    ${props => props.disabled ? 'opacity: 0.5' : ''}
   }
 
   &:hover {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s;
+    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
+    opacity: ${props => props.disabled ? '0.5' : '0.7'};
+    transition: ${props => props.disabled ? '0.3s' : 'none'};
   }
 `
 
@@ -25,6 +27,7 @@ const PrimaryButton = (props) => {
   return (
     <Button onClick={() => props.onClick()}
       className={props.className}
+      disabled={props.disabled}
     >
       {props.children}
     </Button>
@@ -33,7 +36,8 @@ const PrimaryButton = (props) => {
 
 PrimaryButton.propTypes = {
   children: PropTypes.string,
-  onClick: PropTypes.node
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool
 } 
 
 export default PrimaryButton;

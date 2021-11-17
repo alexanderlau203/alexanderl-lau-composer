@@ -34,6 +34,7 @@ const TextArea = styled.textarea`
   background-color: #FBFBFB;
   color: #444444;
   margin-top: 2px;
+  resize: none;
 `
 
 export const TextInputGroup = (props) => {

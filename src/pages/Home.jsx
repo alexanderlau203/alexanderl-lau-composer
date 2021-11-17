@@ -42,7 +42,6 @@ const MoreInfoButton = styled(PrimaryButton)`
   margin: auto;
   margin-top: 20px;
   margin-bottom: 50px;
-  width: 150px;
 `
 
 const Home = () => {
