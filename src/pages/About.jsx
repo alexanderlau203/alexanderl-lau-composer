@@ -6,18 +6,34 @@ import { MainTitle } from '../components/PageTitles';
 
 const Body = styled.div`
   display: flex;
+
+  @media (max-width: 1115px) {
+    flex-direction: column;
+  }
 `
 
 const CoverPhoto = styled.img`
   width: 50%;
   height: 100vh;
   object-fit: cover;
+
+  @media (max-width: 1115px) {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    margin-top: 150px;
+  }
 `
 
 const AboutSection = styled.div`
   width: 50%;
   height: 100%;
   padding-top: 100px;
+
+  @media (max-width: 1115px) {
+    width: 100%;
+    padding-top: 0px;
+  }
 `
 
 const AboutWrapper = styled.div`

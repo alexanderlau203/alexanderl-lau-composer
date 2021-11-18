@@ -17,7 +17,11 @@ const CoverPhotoText = styled.div`
   width: 300px;
   color: white;
   top: 300px;
-  left: 150px;
+  left: 10%;
+
+  @media (max-width: 750px) {
+    width: 200px;
+  }
 `
 
 const CoverPhotoTitle = styled.div`

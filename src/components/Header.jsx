@@ -8,6 +8,7 @@ const HeaderSection = styled.div`
   background-color: white;
   width: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  z-index: 1;
 `
 
 const HeaderWrapper = styled.div`
@@ -37,6 +38,11 @@ const NavBar = styled.div`
   display: flex;
   justify-content: space-between;
   margin-right: 20px;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 `
 
 const NavLink = styled(Link)`
@@ -48,7 +54,8 @@ const NavLink = styled(Link)`
   
   &:hover {
     text-decoration: underline;
-    font-weight: bold
+    font-weight: bold;
+    color: black;
   }
 `
 

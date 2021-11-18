@@ -16,16 +16,25 @@ const Body = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0px 4% 80px 4%;
+
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+  }
 `
 
 const ContactForm = styled.div`
   width: 50%;
   height: 800px;
+  padding: 50px 100px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 25px 50px;
+  }
 `
 
 const FormWrapper = styled.div`
   margin-top: 80px;
-  padding: 50px 100px;
 `
 
 const Form = styled.div`
@@ -49,6 +58,11 @@ const PhotoWrapper = styled.div`
     height: 570px;
     object-fit: cover;
     width: 75%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin-top: 100px;
   }
 `
 

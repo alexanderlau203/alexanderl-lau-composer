@@ -2,15 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterSection = styled.div`
-  height: 100px;
-  bottom: 0px;
-  width: 100vw;
+  & {
+    height: 100px;
+    bottom: 0px;
+    width: 98vw;
+    margin: auto;
+  }
+
+  @media (max-width: 550px) {
+    display: none;
+  }
 `
 const FooterBody = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 10px 30px;
-  font-size: 11pt
+  padding: 0px 30px;
+  font-size: 11pt;
 `
 
 const Subtitle = styled.div`
