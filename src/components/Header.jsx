@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { Navigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HeaderSection = styled.div`
@@ -60,10 +60,13 @@ const NavLink = styled(Link)`
 `
 
 const Header = () => {
+  let navigate = useNavigate()
   const [toHome, setToHome] = React.useState(false)
 
+  
   if (toHome) {
-    return <Navigate to="/" />
+    setToHome(false)
+    navigate("/")
   }
 
   return (

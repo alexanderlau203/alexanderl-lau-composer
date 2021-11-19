@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const PreviewContainer = styled.div`
   width: 375px;
-  margin: 20px;
+  margin: 40px;
 `
 
 const CoverPhoto = styled.img`

@@ -36,7 +36,7 @@ const PrimaryButton = (props) => {
 
 PrimaryButton.propTypes = {
   children: PropTypes.string,
-  onClick: PropTypes.node,
+  onClick: PropTypes.func,
   disabled: PropTypes.bool
 } 
 
