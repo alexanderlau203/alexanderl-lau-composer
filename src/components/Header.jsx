@@ -63,7 +63,6 @@ const Header = () => {
   let navigate = useNavigate()
   const [toHome, setToHome] = React.useState(false)
 
-  
   if (toHome) {
     setToHome(false)
     navigate("/")

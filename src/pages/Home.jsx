@@ -76,7 +76,7 @@ const Home = () => {
           music for strings. He is also a member of the Seraphim String Trio, established in 2015. 
           Alex's compositional style is diverse and often changes. Most recently, his works have been 
           influenced by Jazz and American minimalism. Alex is also the composer of ‘Jacaranda Snow’, 
-          a piano quartet for the growth mindset picture book, Jacaranda Snow. Alex lives with his 
+          a piano quartet for the growth mindset picture book, <i>Jacaranda Snow</i>. Alex lives with his 
           family in Sydney and currently studies at the University of New South Wales.
         </BodyText>
         <MoreInfoButton onClick={() => setToAbout(true)}>
