@@ -4,10 +4,12 @@ import PropTypes from 'prop-types'
 
 const DetailRow = styled.div`
   display: flex;
+  margin-top: 0px !important;
+  ${props => props.invert ? 'color: white;' : ''}
 `
 
 const LabelWrapper = styled.div`
-  min-width: 150px;
+  min-width: 100px;
 `
 
 const Label = styled.span`
@@ -17,7 +19,7 @@ const Label = styled.span`
 
 const KeyValueRow = (props) => {
   return (
-    <DetailRow>
+    <DetailRow invert={props.invert}>
       <LabelWrapper>
         <Label>{props.label}</Label>:
       </LabelWrapper>
@@ -31,6 +33,7 @@ const KeyValueRow = (props) => {
 KeyValueRow.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
+  invert: PropTypes.bool
 } 
 
 export default KeyValueRow;

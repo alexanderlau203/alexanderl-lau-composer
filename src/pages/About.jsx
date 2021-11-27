@@ -40,6 +40,10 @@ const AboutWrapper = styled.div`
   padding: 50px 110px
 `
 
+const AboutTitle = styled(MainTitle)`
+  margin-bottom: 30px;
+`
+
 const About = () => {
   return (
     <section id="about">
@@ -51,7 +55,7 @@ const About = () => {
         />
         <AboutSection>
           <AboutWrapper>
-            <MainTitle>About</MainTitle>
+            <AboutTitle>About</AboutTitle>
             <p>Hello! I’m Alex.</p>
             <p>
               I’m a  contemporary, classical composer. I was born in Sydney, Australia and attended 

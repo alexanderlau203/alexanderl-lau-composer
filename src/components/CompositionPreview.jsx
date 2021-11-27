@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
 import PrimaryButton from './PrimaryButton';
+import { Subtitle } from './PageTitles';
 
 const PreviewContainer = styled.div`
   width: 375px;
@@ -24,13 +25,6 @@ const Title = styled.div`
   width: 100%;
 `
 
-const Instrumentation = styled.label`
-  font-style: italic;
-  font-size: 14pt;
-  margin-bottom: 10px;
-  color: #888888
-`
-
 const Description = styled.div`
   text-align: justify;
 `
@@ -42,15 +36,16 @@ const ButtonWrapper = styled.div`
 `
 
 const CompositionPreview = (props) => {
+  console.log(props.data)
   return (
     <PreviewContainer>
       <CoverPhoto src={props.img}
         alt={props.alt}
       />
       <TextWrapper>
-        <Title>{props.title}</Title>
-        <Instrumentation>{props.instrumentation}</Instrumentation>
-        <Description>{props.description}</Description>
+        <Title>{props.data.name}</Title>
+        <Subtitle>{`${props.data.instrumentation} (${props.data.year})`}</Subtitle>
+        <Description>{props.data.description}</Description>
       </TextWrapper>
       <ButtonWrapper>
         <PrimaryButton onClick={() => props.onClick()}>
@@ -64,9 +59,8 @@ const CompositionPreview = (props) => {
 CompositionPreview.propTypes = {
   img: PropTypes.node,
   alt: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  data: PropTypes.object
 } 
 
 export default CompositionPreview;

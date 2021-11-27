@@ -1,16 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
-import { MainTitle } from './PageTitles';
+import { Subtitle, MainTitle } from './PageTitles';
 import KeyValueRow from './KeyValueRow';
 
 const TextPanel = styled.div`
-  color: white;
-  padding: 20px 60px;
-
-  & hr {
-    margin: 40px 0px;
-  }
+  padding: 30px;
 `
 
 const CompositionDetails = styled.div`
@@ -19,26 +14,27 @@ const CompositionDetails = styled.div`
   }
 `
 
-const CompositionTextPanel = (props) => {
+const Description = styled.p`
+  margin-top: 30px;
+  color: white;
+`
 
+const CompositionTextPanel = (props) => {
   return (
     <TextPanel>
       <CompositionDetails>
-        <MainTitle>{props.title}</MainTitle>
-        <KeyValueRow label="Year" value={props.year}/>
-        <KeyValueRow label="Premiere" value={props.premiere}/>
-        <KeyValueRow label="Instrumentation" value={props.instrumentation}/>
-        <hr />
+        <MainTitle invert>{props.data.name}</MainTitle>
+        <Subtitle invert>{props.data.instrumentation}</Subtitle>
+        <KeyValueRow invert label="Year" value={props.data.year}/>
+        <KeyValueRow invert label="Premiere" value={props.data.premiere}/>
+        <Description>{props.data.description}</Description>
       </CompositionDetails>
     </TextPanel>
   );
 }
 
 CompositionTextPanel.propTypes = {
-  title: PropTypes.string,
-  year: PropTypes.string,
-  instrumentation: PropTypes.string,
-  premiere: PropTypes.string
+  data: PropTypes.object
 } 
 
 export default CompositionTextPanel;

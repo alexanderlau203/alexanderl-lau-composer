@@ -1,0 +1,58 @@
+{
+    "prelude": {
+        "name": "Christmas Prelude",
+        "year": "2021",
+        "premiere": "None",
+        "instrumentation": "Solo piano",
+        "description": "A short, simple but pensive prelude written for solo piano."
+    },
+    "asymptote": {
+        "name": "Breaking the Asymptote",
+        "year": "2020",
+        "premiere": "Piano quartet arrangement - Seraphim String Trio & Eric Rong, Mosman Art Gallery, NSW, Aus; Mar 2021.",
+        "instrumentation": "Semi-chamber orchestra",
+        "description": "A fast-paced and high-energy work originally composed for chamber orchestra and also arranged for piano quartet (2 violins). The asymptote is a mathmatical concept, where a line approaches another and gets infinitely close but never touches. This idea is reflected by the constant harmonic build-ups in the piece, combined with the fast-paced melodies exhibited by contemporary American composers, such as John Adams and Frank Zappa."
+    },
+    "jacaranda": {
+        "name": "Jacaranda Snow",
+        "year": "2019",
+        "premiere": "Alex Lau (vln.), Luke Poier (vc.) & Eric Rong (pno.), Sydney Grammar Preparatory School St Ives, NSW, Aus; Feb 2019.",
+        "instrumentation": "Piano trio (2 violins)",
+        "description": "A short work written to accompany the growth mindset picture book, written by Catherine Greer and illustrated by Helen Magisson. The musical narrative follows the storyline in the book. When it snows in the mountains, Jess longs to go. But there's no extra money for a holiday this year. So Jess finds a way to see the most amazing snow of all."
+    },
+    "disintegrating": {
+        "name": "Concertino for Disintegrating Cello",
+        "year": "2018",
+        "premiere": "Alex Lau (vln. I), Yilan Yu (vln. II), Daniel Lin (vla.), Luke Poier (vc.) & Eric Rong (pno.) Sydney Grammar School, NSW, Aus; Sep 2018.",
+        "instrumentation": "Piano quintet",
+        "description": "Primal and violent, the concertino was written for a cello that is (optionally) physically destroyed throughout the piece. The work is based on an excerpt from ‘The Second Coming’ by William Butler Yeats."
+    },
+    "southernCross": {
+        "name": "Radiant Southern Cross",
+        "year": "2017",
+        "premiere": "Combined ACSMF schools, Parliament House - Grand Hall, ACT, Aus; June 2017.",
+        "instrumentation": "Antiphonal brass & percussion",
+        "description": "The winning fanfare written for the 2017 ACSMF fanfare competition. Written for antiphonal brass to play in the galleries of the Great Hall in Parliament House, Canberra."
+    },
+    "lynx": {
+        "name": "Hunter and the Lynx",
+        "year": "2016",
+        "premiere": "Alex Lau (vln. I), Yilan Yu (vln. II), Daniel Lin (vla.), Luke Poier (vc.) & Eric Rong (pno.) Sydney Grammar School, NSW, Aus; Sep 2018.",
+        "instrumentation": "Piano quintet",
+        "description": "A fast-paced and energetic work written for piano quintet. Loosely progamatic, the piece follows the deathly chase of the endangered lynx by a ruthless hunter."
+    },
+    "concerto": {
+        "name": "Violin Concerto in A Major",
+        "year": "2016",
+        "premiere": "None",
+        "instrumentation": "Solo violin and orchestra",
+        "description": "A single-movement show piece for violin and orchestra, written in a post-Romantic style."
+    },
+    "clouds": {
+        "name": "Beyond the Clouds",
+        "year": "2015",
+        "premiere": "Australian Youth Orchestra, Sydney Opera House, NSW, Aus, 2015",
+        "instrumentation": "Classical orchestra",
+        "description": "One of the selected fanfares in the 2015 Artology Fanfare Competition. Written for Classical orchestra and drawing from the symphonic energy of large-scale Romantic symphonies and overtures."
+    }
+}
