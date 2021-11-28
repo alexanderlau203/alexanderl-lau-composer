@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 
 const Button = styled.button`
   & {
-    color: white;
-    background-color: black;
+    color: ${props => props.outline ? 'black' : 'white'};
+    background-color: ${props => props.outline ? 'white' : 'black'};
     border-radius: 0px;
     padding: 12px 18px;
     font-size: 12pt;
@@ -18,8 +18,9 @@ const Button = styled.button`
 
   &:hover {
     cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
-    opacity: ${props => props.disabled ? '0.5' : '0.7'};
-    transition: ${props => props.disabled ? '0.3s' : 'none'};
+    ${props => props.disabled ? 'opacity: 0.5;' : ''}
+    ${props => props.outline ? 'background-color: #BBBBBB;' : ''}
+    transition: 0.3s
   }
 `
 
@@ -28,6 +29,7 @@ const PrimaryButton = (props) => {
     <Button onClick={() => props.onClick()}
       className={props.className}
       disabled={props.disabled}
+      outline={props.outline}
     >
       {props.children}
     </Button>

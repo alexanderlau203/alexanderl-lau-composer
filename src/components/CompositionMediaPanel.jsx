@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types'
 import { H1 } from './PageTitles';
-import MediaPlayer from './MediaPlayer';
-import Prelude from '../downloads/Prelude Pensive.mp3'
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import DownloadCompositionGroup from './DownloadCompositionGroup';
 
 const MediaPanel = styled.div`
   & {
@@ -13,26 +14,59 @@ const MediaPanel = styled.div`
   & h2 {
     margin-bottom: 30px;
   }
+
+  & p {
+    color: white;
+  }
+`
+
+const AudioPlayerObj = styled(AudioPlayer)`
+  margin-bottom: 30px;
 `
 
 const CompositionMediaPanel = (props) => {
   return (
     <MediaPanel>
+      {/* Audio components */}
       <H1 invert>Media</H1>
-      <MediaPlayer type="audio"
-        src={Prelude}
-        name="Prelude"
-      />
+      {
+        props.audio !== undefined &&
+        props.audio.map((val, idx) => {
+          return (
+            <AudioPlayerObj src={val}
+              autoPlay={false}
+              header={props.data.audioTitles[idx]}
+              key={idx}
+            />
+          )
+        })
+      }
+
+      {/* Sheet music component */}
+      <H1 invert>Scores</H1>
+      {
+        !props.hidePurchaseTip &&
+        <p>Get in contact to purchase parts.</p>
+      }
+      {
+        props.scores !== undefined &&
+        props.scores.map((val, idx) => {
+          return (
+            <DownloadCompositionGroup title={props.data.scoreTitles[idx]} 
+              PDF={val}
+            />
+          )
+        })
+      }
     </MediaPanel>
   );
 }
 
 CompositionMediaPanel.propTypes = {
-  title: PropTypes.string,
-  year: PropTypes.string,
-  instrumentation: PropTypes.string,
-  premiere: PropTypes.string,
-  description: PropTypes.string
+  audio: PropTypes.array,
+  data: PropTypes.object,
+  PDF: PropTypes.node,
+  hidePurchaseTip: PropTypes.bool
 } 
 
 export default CompositionMediaPanel;

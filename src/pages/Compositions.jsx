@@ -11,7 +11,7 @@ import DisintegratingCello from '../assets/DisintegratingCello.jpg'
 import SouthernCross from '../assets/SouthernCross.jpeg'
 import Lynx from '../assets/Lynx.jpg'
 import Concerto from '../assets/Concerto.jpeg'
-import Fanfare from '../assets/Fanfare.png'
+import Fanfare from '../assets/Fanfare.jpg'
 import { MainTitle } from '../components/PageTitles'
 import Comp from '../assets/Compositions'
 
