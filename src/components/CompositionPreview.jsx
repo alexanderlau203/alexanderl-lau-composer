@@ -7,6 +7,10 @@ import { Subtitle } from './PageTitles';
 const PreviewContainer = styled.div`
   width: 375px;
   margin: 40px;
+
+  @media (max-width: 400px) {
+    width: 90%
+  }
 `
 
 const CoverPhoto = styled.img`
@@ -36,7 +40,6 @@ const ButtonWrapper = styled.div`
 `
 
 const CompositionPreview = (props) => {
-  console.log(props.data)
   return (
     <PreviewContainer>
       <CoverPhoto src={props.img}
