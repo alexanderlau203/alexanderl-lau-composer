@@ -4,11 +4,19 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 const HeaderSection = styled.div`
-  position: fixed;
-  background-color: white;
-  width: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  & {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  @media (max-width: 500px) {
+    & {
+      position: absolute;
+    }
+  }
 `
 
 const HeaderWrapper = styled.div`
