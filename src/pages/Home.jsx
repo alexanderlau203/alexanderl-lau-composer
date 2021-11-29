@@ -36,20 +36,20 @@ const BodyWrapper = styled.div`
     margin: auto;
     margin-top: 100px;
   }
-`
-
-const BodyText = styled.p`
-  & {
-    margin: auto;
-    text-align: justify;
-    line-height: 27px;
-  }
 
   @media (max-width: 500px) {
     & {
-      width: 275px;
+      width: 90%;
+      align-items: center;
+      margin: 100px auto;
     }
   }
+`
+
+const BodyText = styled.p`
+  margin: auto;
+  text-align: justify;
+  line-height: 27px;
 `
 
 const MoreInfoButton = styled(PrimaryButton)`

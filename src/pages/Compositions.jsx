@@ -27,6 +27,10 @@ const Body = styled.div`
     text-align: center;
     margin: 20px 0px;
   }
+
+  @media (max-width: 450px) {
+    padding: 150px 5% 100px 5%
+  }
 `
 
 const Gallery = styled.div`
@@ -48,6 +52,8 @@ const Row = styled.div`
     & {
       flex-direction: column;
       align-items: center;
+      width: 100%;
+      background-color: pink;
     }
   }
 `
