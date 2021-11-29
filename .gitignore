@@ -32,4 +32,7 @@ typings/
 *.tgz
 
 # Yarn Integrity file
-.yarn-integrity
+.yarn-integrity'
+
+build/
+.env

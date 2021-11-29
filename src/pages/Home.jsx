@@ -29,17 +29,27 @@ const CoverPhotoTitle = styled.div`
 `
 
 const BodyWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin: auto;
-  margin-top: 100px;
+  & {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+  }
 `
 
 const BodyText = styled.p`
-  margin: auto;
-  text-align: justify;
-  line-height: 27px;
+  & {
+    margin: auto;
+    text-align: justify;
+    line-height: 27px;
+  }
+
+  @media (max-width: 500px) {
+    & {
+      width: 275px;
+    }
+  }
 `
 
 const MoreInfoButton = styled(PrimaryButton)`

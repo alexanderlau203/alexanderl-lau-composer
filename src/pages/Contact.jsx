@@ -20,6 +20,10 @@ const Body = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column-reverse;
   }
+
+  @media (max-width: 450px) {
+    margin: 0px;
+  }
 `
 
 const ContactForm = styled.div`

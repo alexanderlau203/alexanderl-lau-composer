@@ -32,9 +32,24 @@ const Body = styled.div`
 const Gallery = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   max-width: 1000px;
   margin: auto;
   width: 100%;
+`
+
+const Row = styled.div`
+  & {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (max-width: 1000px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `
 
 const Compositions = () => {
@@ -51,50 +66,54 @@ const Compositions = () => {
       <Body>
         <MainTitle>Compositions</MainTitle>
         <Gallery>
-          <div>
+          <Row>
             <CompositionPreview data={Comp.prelude}
               img={PreludePensive}
               alt="Serene lake with mountains and shrubs."
               onClick={() => setToCompositionPage('prelude')}
             />
-            <CompositionPreview data={Comp.jacaranda}
-              img={JacarandaSnow}
-              alt="Jacaranda Snow book cover illustration."
-              onClick={() => setToCompositionPage('jacaranda')}
-            />
-            <CompositionPreview data={Comp.southernCross}
-              img={SouthernCross}
-              alt="ACSMF 2017 logo."
-              onClick={() => setToCompositionPage('southernCross')}
-            />
-            <CompositionPreview data={Comp.concerto}
-              img={Concerto}
-              alt="Violin scroll on top of manuscript paper."
-              onClick={() => setToCompositionPage('concerto')}
-            />
-          </div>
-          <div>
             <CompositionPreview data={Comp.asymptote}
               img={BreakingTheAsymptote}
               alt="Breaking the Asymptote 2021 concert coverpage."
               onClick={() => setToCompositionPage('asymptote')}
+            />
+          </Row>
+          <Row>
+            <CompositionPreview data={Comp.jacaranda}
+              img={JacarandaSnow}
+              alt="Jacaranda Snow book cover illustration."
+              onClick={() => setToCompositionPage('jacaranda')}
             />
             <CompositionPreview data={Comp.disintegrating}
               img={DisintegratingCello}
               instrumentation="Piano quintet"
               onClick={() => setToCompositionPage('disintegrating')}
             />
+          </Row>
+          <Row>
+            <CompositionPreview data={Comp.southernCross}
+              img={SouthernCross}
+              alt="ACSMF 2017 logo."
+              onClick={() => setToCompositionPage('southernCross')}
+            />
             <CompositionPreview data={Comp.lynx}
               img={Lynx}
               alt="Close-up of a lynx's eye."
               onClick={() => setToCompositionPage('lynx')}
+            />
+          </Row>
+          <Row>
+            <CompositionPreview data={Comp.concerto}
+              img={Concerto}
+              alt="Violin scroll on top of manuscript paper."
+              onClick={() => setToCompositionPage('concerto')}
             />
             <CompositionPreview data={Comp.clouds}
               img={Fanfare}
               alt="Artology fanfare competition logo."
               onClick={() => setToCompositionPage('clouds')}
             />
-          </div>
+          </Row>
         </Gallery>
       </Body>
       <Footer />

@@ -49,20 +49,51 @@ const Section = styled.section`
 `
 
 const Body = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 150px 10% 0px 10%;
-  height: fit-content;
-  min-height: 100vh;
+  & {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 10% 0px 10%;
+    height: fit-content;
+    min-height: 100vh;
+  }
+
+  @media (max-width: 1100px) {
+    & {
+      padding: 180px 20px 10px 20px;
+    }
+  }
+
+  @media (max-width: 450px) {
+    & {
+      padding: 180px 0px 10px 0px;
+    }
+  }
 `
 
 const Content = styled.div`
-  display: flex;
+  & {
+    display: flex;
+  }
+
+  @media (max-width: 1100px) {
+    & {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 `
 
 const PanelWrapper = styled.div`
-  height: 100%;
-  width: 50%;
+  & {
+    height: 100%;
+    width: 50%;
+  }
+
+  @media (max-width: 1100px) {
+    & {
+      width: 100%;
+    }
+  }
 `
 
 const BackButton = styled(PrimaryButton)`

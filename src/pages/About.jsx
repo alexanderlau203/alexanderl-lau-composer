@@ -37,7 +37,15 @@ const AboutSection = styled.div`
 `
 
 const AboutWrapper = styled.div`
-  padding: 50px 110px
+  & {
+    padding: 50px 110px
+  }
+
+  @media (max-width: 500px) {
+    & {
+      padding: 40px;
+    }
+  }
 `
 
 const AboutTitle = styled(MainTitle)`
