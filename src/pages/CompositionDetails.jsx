@@ -16,6 +16,7 @@ import SouthernCross from '../assets/SouthernCrossBackground.jpeg'
 import Lynx from '../assets/LynxBackground.jpeg'
 import Concerto from '../assets/Concerto.jpeg'
 import Fanfare from '../assets/CloudsBackground.JPG'
+import ViolinAndCello from '../assets/ViolinAndCelloBackground.png'
 
 // Audio recordings
 import PreludeAudio from '../downloads/Christmas Prelude.mp3'
@@ -28,6 +29,8 @@ import ConcertoAudioReduc from '../downloads/Violin Concerto No 1 in A Major Pia
 import AsymptoteAudio from '../downloads/Breaking the Asymptote.mp3'
 import AsymptoteFullAudio from '../downloads/Breaking the Asymptote Full.mp3'
 import CloudsAudio from '../downloads/Beyond-the-Clouds2Long.mp3'
+import Allegro from '../downloads/Allegro.wav'
+import Adagio from '../downloads/Adagio.wav'
 
 // Scores
 import PreludeScore from '../downloads/Christmas Prelude - Full Score.pdf'
@@ -40,9 +43,11 @@ import ConcertoReducScore from '../downloads/Violin Concerto No 1 in A Major Pia
 import ConcertoScore from '../downloads/Violin Concerto in A Major - Full Score.pdf'
 import CloudsScore from '../downloads/Beyond the Clouds Full Orchestration - Full Score.pdf'
 import SouthernCrossScore from '../downloads/Radiant Southern Cross - Full Score.pdf'
+import AdagioScore from '../downloads/Mystery Friend Duet - Adagio.pdf'
+import AllegroScore from '../downloads/Mystery Friend Duet - Allegro - Full Score.pdf'
 
 const Section = styled.section`
-  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${props => props.img});
+  background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url(${props => props.img});
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -155,6 +160,11 @@ const CompositionDetails = (props) => {
           setAudio([SouthernCrossAudio])
           setScores([SouthernCrossScore])
           break
+        case 'mysteryFriends':
+          setImg(ViolinAndCello)
+          setAudio([Allegro, Adagio])
+          setScores([AllegroScore, AdagioScore])
+          break
         default: 
       }
     }
@@ -189,7 +199,7 @@ const CompositionDetails = (props) => {
             <CompositionMediaPanel audio={audio}
               data={Comp[piece]}
               scores={scores}
-              hidePurchaseTip={piece === 'prelude'}
+              hidePurchaseTip={piece === 'prelude' || piece === 'mysteryFriends'}
             />
           </PanelWrapper>
         </Content>

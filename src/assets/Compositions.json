@@ -1,4 +1,13 @@
 {
+    "mysteryFriends": {
+        "name": "The Mystery Friends",
+        "year": "2022",
+        "premiere": "Recorded - Alex Lau (vln.) & Luke Poier (vc.)",
+        "instrumentation": "Violin & Violoncello Duet",
+        "description": "An original duet for violin and cello, written for the picture book written by Catherine Greer and illustrated by Joanna Bartel. Violin & Cello follows two young musicians as they discover the secret to who is practising in the apartment next door!",
+        "audioTitles": ["I. Allegro", "II. Adagio"],
+        "scoreTitles": ["I. Allegro - Full score", "II. Adagio - Full score"]
+    },
     "prelude": {
         "name": "Christmas Prelude",
         "year": "2021",

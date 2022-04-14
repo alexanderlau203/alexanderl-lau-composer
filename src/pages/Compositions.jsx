@@ -12,8 +12,10 @@ import SouthernCross from '../assets/SouthernCross.jpeg'
 import Lynx from '../assets/Lynx.jpg'
 import Concerto from '../assets/Concerto.jpeg'
 import Fanfare from '../assets/Fanfare.jpg'
+import ViolinAndCello from '../assets/ViolinAndCello.jpeg'
 import { MainTitle } from '../components/PageTitles'
 import Comp from '../assets/Compositions'
+
 
 
 const Body = styled.div`
@@ -72,47 +74,54 @@ const Compositions = () => {
         <MainTitle>Compositions</MainTitle>
         <Gallery>
           <Row>
+            <CompositionPreview data={Comp.mysteryFriends}
+              img={ViolinAndCello}
+              alt="Violin and Cello book cover."
+              onClick={() => setToCompositionPage('mysteryFriends')}
+            />
             <CompositionPreview data={Comp.prelude}
               img={PreludePensive}
               alt="Serene lake with mountains and shrubs."
               onClick={() => setToCompositionPage('prelude')}
             />
+          </Row>
+          <Row>
             <CompositionPreview data={Comp.asymptote}
               img={BreakingTheAsymptote}
               alt="Breaking the Asymptote 2021 concert coverpage."
               onClick={() => setToCompositionPage('asymptote')}
             />
-          </Row>
-          <Row>
             <CompositionPreview data={Comp.jacaranda}
               img={JacarandaSnow}
               alt="Jacaranda Snow book cover illustration."
               onClick={() => setToCompositionPage('jacaranda')}
             />
+          </Row>
+          <Row>
             <CompositionPreview data={Comp.disintegrating}
               img={DisintegratingCello}
               instrumentation="Piano quintet"
               onClick={() => setToCompositionPage('disintegrating')}
             />
-          </Row>
-          <Row>
             <CompositionPreview data={Comp.southernCross}
               img={SouthernCross}
               alt="ACSMF 2017 logo."
               onClick={() => setToCompositionPage('southernCross')}
             />
+          </Row>
+          <Row>
             <CompositionPreview data={Comp.lynx}
               img={Lynx}
               alt="Close-up of a lynx's eye."
               onClick={() => setToCompositionPage('lynx')}
             />
-          </Row>
-          <Row>
             <CompositionPreview data={Comp.concerto}
               img={Concerto}
               alt="Violin scroll on top of manuscript paper."
               onClick={() => setToCompositionPage('concerto')}
             />
+          </Row>
+          <Row>
             <CompositionPreview data={Comp.clouds}
               img={Fanfare}
               alt="Artology fanfare competition logo."
