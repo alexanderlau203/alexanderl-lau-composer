@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 import Header from '../components/Header'
 import CompositionTextPanel from '../components/CompositionTextPanel';
 import CompositionMediaPanel from '../components/CompositionMediaPanel';
@@ -45,6 +45,7 @@ import CloudsScore from '../downloads/Beyond the Clouds Full Orchestration - Ful
 import SouthernCrossScore from '../downloads/Radiant Southern Cross - Full Score.pdf'
 import AdagioScore from '../downloads/Mystery Friend Duet - Adagio.pdf'
 import AllegroScore from '../downloads/Mystery Friend Duet - Allegro - Full Score.pdf'
+import { fadeIn } from 'react-animations';
 
 const Section = styled.section`
   background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url(${props => props.img});
@@ -60,6 +61,7 @@ const Body = styled.div`
     padding: 150px 10% 0px 10%;
     height: fit-content;
     min-height: 100vh;
+    animation: 1.5s ${keyframes(fadeIn)};
   }
 
   @media (max-width: 1100px) {

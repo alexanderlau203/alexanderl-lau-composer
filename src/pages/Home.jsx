@@ -1,15 +1,17 @@
 import React from 'react';
 import Header from '../components/Header'
 import HomeImage from '../assets/Home.JPG'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Footer from '../components/Footer';
 import PrimaryButton from '../components/PrimaryButton';
 import { Navigate } from 'react-router';
+import { fadeIn } from 'react-animations';
 
 const CoverPhoto = styled.img`
   width: 100%;
   height: 550px;
   object-fit: cover;
+  animation: 0.5s ${keyframes(fadeIn)} linear;
 `
 
 const CoverPhotoText = styled.div`
@@ -18,6 +20,7 @@ const CoverPhotoText = styled.div`
   color: white;
   top: 300px;
   left: 10%;
+  animation: 1.5s ${keyframes(fadeIn)} linear;
 
   @media (max-width: 750px) {
     width: 200px;
@@ -26,6 +29,7 @@ const CoverPhotoText = styled.div`
 
 const CoverPhotoTitle = styled.div`
   font-size: 20pt;
+  animation: 1.8s ${keyframes(fadeIn)} linear;
 `
 
 const BodyWrapper = styled.div`
@@ -35,6 +39,7 @@ const BodyWrapper = styled.div`
     width: 60%;
     margin: auto;
     margin-top: 100px;
+    animation: 1.5s ${keyframes(fadeIn)} linear;
   }
 
   @media (max-width: 500px) {

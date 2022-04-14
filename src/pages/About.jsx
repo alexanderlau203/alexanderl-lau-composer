@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from '../components/Header'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import AboutImage from '../assets/About.JPG';
 import { MainTitle } from '../components/PageTitles';
+import { fadeIn } from 'react-animations';
 
 const Body = styled.div`
   display: flex;
+  animation: 1s ${keyframes(fadeIn)};
 
   @media (max-width: 1115px) {
     flex-direction: column;

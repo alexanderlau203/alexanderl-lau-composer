@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header'
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 import Footer from '../components/Footer';
 import { MainTitle } from '../components/PageTitles';
 import { TextInputGroup, TextAreaGroup } from '../components/FormGroup';
@@ -9,6 +9,7 @@ import PrimaryButton from '../components/PrimaryButton';
 import emailjs from 'emailjs-com';
 import Spinner from 'react-bootstrap/Spinner'
 import Validator from '../utils/Validator'
+import { fadeIn } from 'react-animations';
 
 const v = new Validator()
 
@@ -16,6 +17,7 @@ const Body = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0px 4% 80px 4%;
+  animation: 1s ${keyframes(fadeIn)};
 
   @media (max-width: 1000px) {
     flex-direction: column-reverse;

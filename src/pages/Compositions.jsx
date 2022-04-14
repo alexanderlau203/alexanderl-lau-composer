@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { useNavigate } from 'react-router';
 import CompositionPreview from '../components/CompositionPreview';
 import BreakingTheAsymptote from '../assets/BreakingTheAsymptote.png'
@@ -15,6 +15,7 @@ import Fanfare from '../assets/Fanfare.jpg'
 import ViolinAndCello from '../assets/ViolinAndCello.jpeg'
 import { MainTitle } from '../components/PageTitles'
 import Comp from '../assets/Compositions'
+import { fadeIn } from 'react-animations';
 
 
 
@@ -23,6 +24,7 @@ const Body = styled.div`
     width: 100%;
     height: fit-contents;
     padding: 150px 10% 100px 10%;
+    animation: 1s ${keyframes(fadeIn)}
   }
 
   & h1 {
