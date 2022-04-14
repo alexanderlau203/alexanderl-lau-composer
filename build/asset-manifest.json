@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.813b57a0.chunk.css",
-    "main.js": "/static/js/main.f687efee.chunk.js",
-    "main.js.map": "/static/js/main.f687efee.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.d60e4201.js",
-    "runtime-main.js.map": "/static/js/runtime-main.d60e4201.js.map",
+    "main.js": "/static/js/main.317247a6.chunk.js",
+    "main.js.map": "/static/js/main.317247a6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.055291cb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.055291cb.js.map",
     "static/css/2.27143b92.chunk.css": "/static/css/2.27143b92.chunk.css",
-    "static/js/2.12aa8473.chunk.js": "/static/js/2.12aa8473.chunk.js",
-    "static/js/2.12aa8473.chunk.js.map": "/static/js/2.12aa8473.chunk.js.map",
-    "static/js/3.b27c2c21.chunk.js": "/static/js/3.b27c2c21.chunk.js",
-    "static/js/3.b27c2c21.chunk.js.map": "/static/js/3.b27c2c21.chunk.js.map",
+    "static/js/2.eebab8e6.chunk.js": "/static/js/2.eebab8e6.chunk.js",
+    "static/js/2.eebab8e6.chunk.js.map": "/static/js/2.eebab8e6.chunk.js.map",
+    "static/js/3.04d0e00c.chunk.js": "/static/js/3.04d0e00c.chunk.js",
+    "static/js/3.04d0e00c.chunk.js.map": "/static/js/3.04d0e00c.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.27143b92.chunk.css.map": "/static/css/2.27143b92.chunk.css.map",
     "static/css/main.813b57a0.chunk.css.map": "/static/css/main.813b57a0.chunk.css.map",
-    "static/js/2.12aa8473.chunk.js.LICENSE.txt": "/static/js/2.12aa8473.chunk.js.LICENSE.txt",
+    "static/js/2.eebab8e6.chunk.js.LICENSE.txt": "/static/js/2.eebab8e6.chunk.js.LICENSE.txt",
     "static/media/About.51f9fe2e.JPG": "/static/media/About.51f9fe2e.JPG",
+    "static/media/Adagio.1d1fb59b.wav": "/static/media/Adagio.1d1fb59b.wav",
+    "static/media/Allegro.771862f8.wav": "/static/media/Allegro.771862f8.wav",
     "static/media/AsymptoteBackground.73b191ee.jpg": "/static/media/AsymptoteBackground.73b191ee.jpg",
     "static/media/Beyond the Clouds Full Orchestration - Full Score.bf9dede5.pdf": "/static/media/Beyond the Clouds Full Orchestration - Full Score.bf9dede5.pdf",
     "static/media/Beyond-the-Clouds2Long.19262d89.mp3": "/static/media/Beyond-the-Clouds2Long.19262d89.mp3",
@@ -41,6 +43,8 @@
     "static/media/JacarandaSnow.882bc1bd.jpeg": "/static/media/JacarandaSnow.882bc1bd.jpeg",
     "static/media/Lynx.507c532a.jpg": "/static/media/Lynx.507c532a.jpg",
     "static/media/LynxBackground.32fa14df.jpeg": "/static/media/LynxBackground.32fa14df.jpeg",
+    "static/media/Mystery Friend Duet - Adagio.bf28a471.pdf": "/static/media/Mystery Friend Duet - Adagio.bf28a471.pdf",
+    "static/media/Mystery Friend Duet - Allegro - Full Score.9e32ea51.pdf": "/static/media/Mystery Friend Duet - Allegro - Full Score.9e32ea51.pdf",
     "static/media/PreludePensive.40c597bb.jpeg": "/static/media/PreludePensive.40c597bb.jpeg",
     "static/media/Radiant Southern Cross - Full Score.0f13d2c7.pdf": "/static/media/Radiant Southern Cross - Full Score.0f13d2c7.pdf",
     "static/media/Radiant Southern Cross.1e05e823.mp3": "/static/media/Radiant Southern Cross.1e05e823.mp3",
@@ -49,13 +53,15 @@
     "static/media/Violin Concerto No 1 in A Major Piano Reduction.d888bc5a.pdf": "/static/media/Violin Concerto No 1 in A Major Piano Reduction.d888bc5a.pdf",
     "static/media/Violin Concerto No 1 in A Major Piano Reduction.dc2260b8.mp3": "/static/media/Violin Concerto No 1 in A Major Piano Reduction.dc2260b8.mp3",
     "static/media/Violin Concerto in A Major - Full Score.8d07ea63.pdf": "/static/media/Violin Concerto in A Major - Full Score.8d07ea63.pdf",
-    "static/media/Violin Concerto in A Major.83630280.mp3": "/static/media/Violin Concerto in A Major.83630280.mp3"
+    "static/media/Violin Concerto in A Major.83630280.mp3": "/static/media/Violin Concerto in A Major.83630280.mp3",
+    "static/media/ViolinAndCello.f2366406.jpeg": "/static/media/ViolinAndCello.f2366406.jpeg",
+    "static/media/ViolinAndCelloBackground.6652b509.png": "/static/media/ViolinAndCelloBackground.6652b509.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.d60e4201.js",
+    "static/js/runtime-main.055291cb.js",
     "static/css/2.27143b92.chunk.css",
-    "static/js/2.12aa8473.chunk.js",
+    "static/js/2.eebab8e6.chunk.js",
     "static/css/main.813b57a0.chunk.css",
-    "static/js/main.f687efee.chunk.js"
+    "static/js/main.317247a6.chunk.js"
   ]
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types'
 import PrimaryButton from './PrimaryButton';
 import { Subtitle } from './PageTitles';
+import ReactHTMLParser from 'react-html-parser'
 
 const PreviewContainer = styled.div`
   width: 375px;
@@ -48,7 +49,7 @@ const CompositionPreview = (props) => {
       <TextWrapper>
         <Title>{props.data.name}</Title>
         <Subtitle>{`${props.data.instrumentation} (${props.data.year})`}</Subtitle>
-        <Description>{props.data.description}</Description>
+        <Description>{ReactHTMLParser(props.data.description)}</Description>
       </TextWrapper>
       <ButtonWrapper>
         <PrimaryButton onClick={() => props.onClick()}>
