@@ -5,8 +5,8 @@
         "premiere": "Recorded - Alex Lau (vln.) & Luke Poier (vc.)",
         "instrumentation": "Violin & Violoncello Duet",
         "description": "An original duet for violin and cello, composed for the picture book written by Catherine Greer and illustrated by Joanna Bartel. Violin & Cello follows two young musicians as they discover the secret to who is practising in the apartment next door! Purchase the book on <a href=\"https://www.amazon.com.au/Violin-Cello-Catherine-Greer/dp/1922539279/\">Amazon</a> now!",
-        "audioTitles": ["I. Allegro", "II. Adagio"],
-        "scoreTitles": ["I. Allegro - Full score", "II. Adagio - Full score"]
+        "audioTitles": ["I. Allegro", "II. Adagio", "I. Allegro (Piano Trio) - MIDI interpretation", "II. Adagio (Piano Trio) - MIDI interpretation"],
+        "scoreTitles": ["I. Allegro - Full score", "II. Adagio - Full score", "I. Allegro (Piano Trio) - Score & Parts", "II. Adagio (Piano Trio) - Score & Parts"]
     },
     "prelude": {
         "name": "Christmas Prelude",

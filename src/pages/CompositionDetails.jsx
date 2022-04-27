@@ -17,6 +17,7 @@ import Lynx from '../assets/LynxBackground.jpeg'
 import Concerto from '../assets/Concerto.jpeg'
 import Fanfare from '../assets/CloudsBackground.JPG'
 import ViolinAndCello from '../assets/ViolinAndCelloBackground.png'
+import { fadeIn } from 'react-animations';
 
 // Audio recordings
 import PreludeAudio from '../downloads/Christmas Prelude.mp3'
@@ -31,6 +32,8 @@ import AsymptoteFullAudio from '../downloads/Breaking the Asymptote Full.mp3'
 import CloudsAudio from '../downloads/Beyond-the-Clouds2Long.mp3'
 import Allegro from '../downloads/Allegro.wav'
 import Adagio from '../downloads/Adagio.wav'
+import AllegroPiano from '../downloads/Allegro Piano Version.mp3'
+import AdagioPiano from '../downloads/Adagio Piano Version.mp3'
 
 // Scores
 import PreludeScore from '../downloads/Christmas Prelude - Full Score.pdf'
@@ -45,7 +48,9 @@ import CloudsScore from '../downloads/Beyond the Clouds Full Orchestration - Ful
 import SouthernCrossScore from '../downloads/Radiant Southern Cross - Full Score.pdf'
 import AdagioScore from '../downloads/Mystery Friend Duet - Adagio.pdf'
 import AllegroScore from '../downloads/Mystery Friend Duet - Allegro - Full Score.pdf'
-import { fadeIn } from 'react-animations';
+import AdagioPianoScore from '../downloads/Adagio Piano Version - Score and parts.pdf'
+import AllegroPianoScore from '../downloads/Allegro Piano Version - Score and parts.pdf'
+
 
 const Section = styled.section`
   background: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75) ), url(${props => props.img});
@@ -164,8 +169,8 @@ const CompositionDetails = (props) => {
           break
         case 'mysteryFriends':
           setImg(ViolinAndCello)
-          setAudio([Allegro, Adagio])
-          setScores([AllegroScore, AdagioScore])
+          setAudio([Allegro, Adagio, AllegroPiano, AdagioPiano])
+          setScores([AllegroScore, AdagioScore, AllegroPianoScore, AdagioPianoScore])
           break
         default: 
       }
