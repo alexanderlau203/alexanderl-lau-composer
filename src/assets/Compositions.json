@@ -1,83 +1,123 @@
 {
-    "mysteryFriends": {
-        "name": "The Mystery Friends",
-        "year": "2022",
-        "premiere": "Recorded - Alex Lau (vln.) & Luke Poier (vc.)",
-        "instrumentation": "Violin & Violoncello Duet",
-        "description": "An original duet for violin and cello, composed for the picture book written by Catherine Greer and illustrated by Joanna Bartel. Violin & Cello follows two young musicians as they discover the secret to who is practising in the apartment next door! Purchase the book on <a href=\"https://www.amazon.com.au/Violin-Cello-Catherine-Greer/dp/1922539279/\">Amazon</a> now!",
-        "audioTitles": ["I. Allegro", "II. Adagio", "I. Allegro (Piano Trio) - MIDI interpretation", "II. Adagio (Piano Trio) - MIDI interpretation"],
-        "scoreTitles": ["I. Allegro - Full score", "II. Adagio - Full score", "I. Allegro (Piano Trio) - Score & Parts", "II. Adagio (Piano Trio) - Score & Parts"]
-    },
-    "prelude": {
-        "name": "Christmas Prelude",
-        "year": "2021",
-        "premiere": "None",
-        "instrumentation": "Solo piano",
-        "description": "A short, simple but pensive prelude written for solo piano.",
-        "audioTitles": ["Christmas Prelude - MIDI interpretation"],
-        "scoreTitles": ["Christmas Prelude - Full score"]
-    },
-    "asymptote": {
-        "name": "Breaking the Asymptote",
-        "year": "2020",
-        "premiere": "Piano quartet arrangement - Seraphim String Trio & Eric Rong, Mosman Art Gallery, NSW, Aus; Mar 2021.",
-        "instrumentation": "Semi-chamber orchestra",
-        "description": "A fast-paced and high-energy work originally composed for chamber orchestra and also arranged for piano quartet (2 violins). The asymptote is a mathmatical concept, where a line approaches another and gets infinitely close but never touches. This idea is reflected by the constant harmonic build-ups in the piece, combined with the fast-paced melodies exhibited by contemporary American composers, such as John Adams and Frank Zappa.",
-        "audioTitles": ["Breaking the Asymptote arr. piano quartet (Live)", "Breaking the Asymptote - MIDI interpretation"],
-        "scoreTitles": ["Breaking the Asymptote arr. piano quartet", "Breaking the Asymptote - Full Score"]
-    },
-    "jacaranda": {
-        "name": "Jacaranda Snow",
-        "year": "2019",
-        "premiere": "Alex Lau (vln.), Luke Poier (vc.) & Eric Rong (pno.), Sydney Grammar Preparatory School St Ives, NSW, Aus; Feb 2019.",
-        "instrumentation": "Piano trio (2 violins)",
-        "description": "A short work written to accompany the growth mindset picture book, written by Catherine Greer and illustrated by Helen Magisson. The musical narrative follows the storyline in the book. When it snows in the mountains, Jess longs to go. But there's no extra money for a holiday this year. So Jess finds a way to see the most amazing snow of all.",
-        "audioTitles": ["Jacaranda Snow"],
-        "scoreTitles": ["Jacaranda Snow"]
-    },
-    "disintegrating": {
-        "name": "Concertino for Disintegrating Cello",
-        "year": "2018",
-        "premiere": "Alex Lau (vln. I), Yilan Yu (vln. II), Daniel Lin (vla.), Luke Poier (vc.) & Eric Rong (pno.) Sydney Grammar School, NSW, Aus; Sep 2018.",
-        "instrumentation": "Piano quintet",
-        "description": "Primal and violent, the concertino was written for a cello that is (optionally) physically destroyed throughout the piece. The work is based on an excerpt from ‘The Second Coming’ by William Butler Yeats.",
-        "audioTitles": ["Concertino for Disintegrating Cello (Live)"],
-        "scoreTitles": ["Concertino for Disintegrating Cello - Full score"]
-    },
-    "southernCross": {
-        "name": "Radiant Southern Cross",
-        "year": "2017",
-        "premiere": "Combined ACSMF schools, Parliament House - Grand Hall, ACT, Aus; June 2017.",
-        "instrumentation": "Antiphonal brass & percussion",
-        "description": "The winning fanfare written for the 2017 ACSMF fanfare competition. Written for antiphonal brass to play in the galleries of the Great Hall in Parliament House, Canberra.",
-        "audioTitles": ["Radiant Southern Cross (Live)"],
-        "scoreTitles": ["Radiant Southern Cross - Full score"]
-    },
-    "lynx": {
-        "name": "Hunter and the Lynx",
-        "year": "2016",
-        "premiere": "Alex Lau (vln. I), Yilan Yu (vln. II), Daniel Lin (vla.), Luke Poier (vc.) & Eric Rong (pno.) Sydney Grammar School, NSW, Aus; Sep 2018.",
-        "instrumentation": "Piano quintet",
-        "description": "A fast-paced and energetic work written for piano quintet. Loosely progamatic, the piece follows the deathly chase of the endangered lynx by a ruthless hunter.",
-        "audioTitles": ["Hunter and the Lynx (Live)"],
-        "scoreTitles": ["Hunter and the Lynx - Full score"]
-    },
-    "concerto": {
-        "name": "Violin Concerto in A Major",
-        "year": "2016",
-        "premiere": "None",
-        "instrumentation": "Solo violin and orchestra",
-        "description": "A single-movement show piece for violin and orchestra, written in a post-Romantic style.",
-        "audioTitles": ["Violin Concerto in A Major - MIDI interpretation", "Violin Concerto in A Major Piano Reduction - MIDI interpretation"],
-        "scoreTitles": ["Violin Concerto in A Major - Full score", "Violin Concerto in A Major Piano Reduction"]
-    },
-    "clouds": {
-        "name": "Beyond the Clouds",
-        "year": "2015",
-        "premiere": "Australian Youth Orchestra, Sydney Opera House, NSW, Aus, 2015",
-        "instrumentation": "Classical orchestra",
-        "description": "One of the selected fanfares in the 2015 Artology Fanfare Competition. Written for Classical orchestra and drawing from the symphonic energy of large-scale Romantic symphonies and overtures.",
-        "audioTitles": ["Beyond the Clouds"],
-        "scoreTitles": ["Beyond the Clouds - Full Score"]
-    }
+  "narcissistTrap": {
+    "name": "The Narcissist Trap",
+    "year": "2022",
+    "premiere": "Alex Lau (vln.), Luke Poier (vc.) & Eric Rong (pno.), Pitt St Uniting Church, NSW, Aus; Apr 2023.",
+    "instrumentation": "Piano trio",
+    "description": "A lust for prestige? Extreme charisma and ambition? No empathy? Pathological lying? You might just have yourself a narcissist! But how was it possible?! There weren't any warning signs... or so it seemed. Perhaps you turned a blind eye. But it's too late now, you've fallen into the narcissist trap!",
+    "audioTitles": [
+      "I. Dinner at the Copacabana Palace",
+      "II. Rhapsody for a Midnight Bar Hop",
+      "III. Gaslight Tango"
+    ],
+    "scoreTitles": [
+      "Program Notes",
+      "I. Dinner at the Copacabana Palace - Full score",
+      "II. Rhapsody for a Midnight Bar Hop - Full score",
+      "III. Gaslight Tango - Full score"
+    ]
+  },
+  "mysteryFriends": {
+    "name": "The Mystery Friends",
+    "year": "2022",
+    "premiere": "Recorded - Alex Lau (vln.) & Luke Poier (vc.)",
+    "instrumentation": "Violin & Violoncello Duet",
+    "description": "An original duet for violin and cello, composed for the picture book written by Catherine Greer and illustrated by Joanna Bartel. Violin & Cello follows two young musicians as they discover the secret to who is practising in the apartment next door! Purchase the book on <a href=\"https://www.amazon.com.au/Violin-Cello-Catherine-Greer/dp/1922539279/\">Amazon</a> now!",
+    "audioTitles": [
+      "I. Allegro",
+      "II. Adagio",
+      "I. Allegro (Piano Trio) - MIDI interpretation",
+      "II. Adagio (Piano Trio) - MIDI interpretation"
+    ],
+    "scoreTitles": [
+      "I. Allegro - Full score",
+      "II. Adagio - Full score",
+      "I. Allegro (Piano Trio) - Score & Parts",
+      "II. Adagio (Piano Trio) - Score & Parts"
+    ]
+  },
+  "prelude": {
+    "name": "Christmas Prelude",
+    "year": "2021",
+    "premiere": "None",
+    "instrumentation": "Solo piano",
+    "description": "A short, simple but pensive prelude written for solo piano.",
+    "audioTitles": ["Christmas Prelude - MIDI interpretation"],
+    "scoreTitles": ["Christmas Prelude - Full score"]
+  },
+  "asymptote": {
+    "name": "Breaking the Asymptote",
+    "year": "2020",
+    "premiere": "Piano quartet arrangement - Seraphim String Trio & Eric Rong, Mosman Art Gallery, NSW, Aus; Mar 2021.",
+    "instrumentation": "Semi-chamber orchestra",
+    "description": "A fast-paced and high-energy work originally composed for chamber orchestra and also arranged for piano quartet (2 violins). The asymptote is a mathmatical concept, where a line approaches another and gets infinitely close but never touches. This idea is reflected by the constant harmonic build-ups in the piece, combined with the fast-paced melodies exhibited by contemporary American composers, such as John Adams and Frank Zappa.",
+    "audioTitles": [
+      "Breaking the Asymptote arr. piano quartet (Live)",
+      "Breaking the Asymptote - MIDI interpretation"
+    ],
+    "scoreTitles": [
+      "Breaking the Asymptote arr. piano quartet",
+      "Breaking the Asymptote - Full Score"
+    ]
+  },
+  "jacaranda": {
+    "name": "Jacaranda Snow",
+    "year": "2019",
+    "premiere": "Alex Lau (vln. I), Yilan Yu (vln. II) Luke Poier (vc.) & Eric Rong (pno.), Sydney Grammar Preparatory School St Ives, NSW, Aus; Feb 2019.",
+    "instrumentation": "Piano quartet (2 violins)",
+    "description": "A short work written to accompany the growth mindset picture book, written by Catherine Greer and illustrated by Helen Magisson. The musical narrative follows the storyline in the book. When it snows in the mountains, Jess longs to go. But there's no extra money for a holiday this year. So Jess finds a way to see the most amazing snow of all.",
+    "audioTitles": ["Jacaranda Snow"],
+    "scoreTitles": ["Jacaranda Snow"]
+  },
+  "disintegrating": {
+    "name": "Concertino for Disintegrating Cello",
+    "year": "2018",
+    "premiere": "Alex Lau (vln. I), Yilan Yu (vln. II), Daniel Lin (vla.), Luke Poier (vc.) & Eric Rong (pno.) Sydney Grammar School, NSW, Aus; Sep 2018.",
+    "instrumentation": "Piano quintet",
+    "description": "Primal and violent, the concertino was written for a cello that is (optionally) physically destroyed throughout the piece. The work is based on an excerpt from ‘The Second Coming’ by William Butler Yeats.",
+    "audioTitles": ["Concertino for Disintegrating Cello (Live)"],
+    "scoreTitles": ["Concertino for Disintegrating Cello - Full score"]
+  },
+  "southernCross": {
+    "name": "Radiant Southern Cross",
+    "year": "2017",
+    "premiere": "Combined ACSMF schools, Parliament House - Grand Hall, ACT, Aus; June 2017.",
+    "instrumentation": "Antiphonal brass & percussion",
+    "description": "The winning fanfare written for the 2017 ACSMF fanfare competition. Written for antiphonal brass to play in the galleries of the Great Hall in Parliament House, Canberra.",
+    "audioTitles": ["Radiant Southern Cross (Live)"],
+    "scoreTitles": ["Radiant Southern Cross - Full score"]
+  },
+  "lynx": {
+    "name": "Hunter and the Lynx",
+    "year": "2016",
+    "premiere": "Alex Lau (vln. I), Yilan Yu (vln. II), Daniel Lin (vla.), Luke Poier (vc.) & Eric Rong (pno.) Sydney Grammar School, NSW, Aus; Sep 2018.",
+    "instrumentation": "Piano quintet",
+    "description": "A fast-paced and energetic work written for piano quintet. Loosely progamatic, the piece follows the deathly chase of the endangered lynx by a ruthless hunter.",
+    "audioTitles": ["Hunter and the Lynx (Live)"],
+    "scoreTitles": ["Hunter and the Lynx - Full score"]
+  },
+  "concerto": {
+    "name": "Violin Concerto in A Major",
+    "year": "2016",
+    "premiere": "None",
+    "instrumentation": "Solo violin and orchestra",
+    "description": "A single-movement show piece for violin and orchestra, written in a post-Romantic style.",
+    "audioTitles": [
+      "Violin Concerto in A Major - MIDI interpretation",
+      "Violin Concerto in A Major Piano Reduction - MIDI interpretation"
+    ],
+    "scoreTitles": [
+      "Violin Concerto in A Major - Full score",
+      "Violin Concerto in A Major Piano Reduction"
+    ]
+  },
+  "clouds": {
+    "name": "Beyond the Clouds",
+    "year": "2015",
+    "premiere": "Australian Youth Orchestra, Sydney Opera House, NSW, Aus, 2015",
+    "instrumentation": "Classical orchestra",
+    "description": "One of the selected fanfares in the 2015 Artology Fanfare Competition. Written for Classical orchestra and drawing from the symphonic energy of large-scale Romantic symphonies and overtures.",
+    "audioTitles": ["Beyond the Clouds"],
+    "scoreTitles": ["Beyond the Clouds - Full Score"]
+  }
 }
