@@ -1,30 +1,29 @@
-import React from 'react';
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import styled, { keyframes } from 'styled-components'
-import { useNavigate } from 'react-router';
-import CompositionPreview from '../components/CompositionPreview';
-import BreakingTheAsymptote from '../assets/BreakingTheAsymptote.png'
-import JacarandaSnow from '../assets/JacarandaSnow.jpeg'
-import PreludePensive from '../assets/PreludePensive.jpeg'
-import DisintegratingCello from '../assets/DisintegratingCello.jpg'
-import SouthernCross from '../assets/SouthernCross.jpeg'
-import Lynx from '../assets/Lynx.jpg'
-import Concerto from '../assets/Concerto.jpeg'
-import Fanfare from '../assets/Fanfare.jpg'
-import ViolinAndCello from '../assets/ViolinAndCello.jpeg'
-import { MainTitle } from '../components/PageTitles'
-import Comp from '../assets/Compositions'
-import { fadeIn } from 'react-animations';
-
-
+import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import styled, { keyframes } from "styled-components";
+import { useNavigate } from "react-router";
+import CompositionPreview from "../components/CompositionPreview";
+import BreakingTheAsymptote from "../assets/BreakingTheAsymptote.png";
+import JacarandaSnow from "../assets/JacarandaSnow.jpeg";
+import PreludePensive from "../assets/PreludePensive.jpeg";
+import DisintegratingCello from "../assets/DisintegratingCello.jpg";
+import SouthernCross from "../assets/SouthernCross.jpeg";
+import Lynx from "../assets/Lynx.jpg";
+import Concerto from "../assets/Concerto.jpeg";
+import Fanfare from "../assets/Fanfare.jpg";
+import NarcissistTrap from "../assets/NarcissistTrap.png";
+import ViolinAndCello from "../assets/ViolinAndCello.jpeg";
+import { MainTitle } from "../components/PageTitles";
+import Comp from "../assets/Compositions";
+import { fadeIn } from "react-animations";
 
 const Body = styled.div`
   & {
     width: 100%;
     height: fit-contents;
     padding: 150px 10% 100px 10%;
-    animation: 1s ${keyframes(fadeIn)}
+    animation: 1s ${keyframes(fadeIn)};
   }
 
   & h1 {
@@ -33,9 +32,9 @@ const Body = styled.div`
   }
 
   @media (max-width: 450px) {
-    padding: 150px 5% 100px 5%
+    padding: 150px 5% 100px 5%;
   }
-`
+`;
 
 const Gallery = styled.div`
   display: flex;
@@ -44,7 +43,7 @@ const Gallery = styled.div`
   max-width: 1000px;
   margin: auto;
   width: 100%;
-`
+`;
 
 const Row = styled.div`
   & {
@@ -59,14 +58,14 @@ const Row = styled.div`
       width: 100%;
     }
   }
-`
+`;
 
 const Compositions = () => {
-  let navigate = useNavigate()
-  const [toCompositionPage, setToCompositionPage] = React.useState(undefined)
+  let navigate = useNavigate();
+  const [toCompositionPage, setToCompositionPage] = React.useState(undefined);
 
   if (toCompositionPage !== undefined) {
-    navigate(`${toCompositionPage}`)
+    navigate(`${toCompositionPage}`);
   }
 
   return (
@@ -76,58 +75,73 @@ const Compositions = () => {
         <MainTitle>Compositions</MainTitle>
         <Gallery>
           <Row>
-            <CompositionPreview data={Comp.mysteryFriends}
+            <CompositionPreview
+              data={Comp.narcissistTrap}
+              img={NarcissistTrap}
+              alt="The Narcissist Trap album cover."
+              onClick={() => setToCompositionPage("narcissistTrap")}
+            />
+            <CompositionPreview
+              data={Comp.mysteryFriends}
               img={ViolinAndCello}
               alt="Violin and Cello book cover."
-              onClick={() => setToCompositionPage('mysteryFriends')}
-            />
-            <CompositionPreview data={Comp.prelude}
-              img={PreludePensive}
-              alt="Serene lake with mountains and shrubs."
-              onClick={() => setToCompositionPage('prelude')}
+              onClick={() => setToCompositionPage("mysteryFriends")}
             />
           </Row>
           <Row>
-            <CompositionPreview data={Comp.asymptote}
+            <CompositionPreview
+              data={Comp.prelude}
+              img={PreludePensive}
+              alt="Lit candle and Christmas pinecones."
+              onClick={() => setToCompositionPage("prelude")}
+            />
+            <CompositionPreview
+              data={Comp.asymptote}
               img={BreakingTheAsymptote}
               alt="Breaking the Asymptote 2021 concert coverpage."
-              onClick={() => setToCompositionPage('asymptote')}
+              onClick={() => setToCompositionPage("asymptote")}
             />
-            <CompositionPreview data={Comp.jacaranda}
+          </Row>
+          <Row>
+            <CompositionPreview
+              data={Comp.jacaranda}
               img={JacarandaSnow}
               alt="Jacaranda Snow book cover illustration."
-              onClick={() => setToCompositionPage('jacaranda')}
+              onClick={() => setToCompositionPage("jacaranda")}
             />
-          </Row>
-          <Row>
-            <CompositionPreview data={Comp.disintegrating}
+            <CompositionPreview
+              data={Comp.disintegrating}
               img={DisintegratingCello}
               instrumentation="Piano quintet"
-              onClick={() => setToCompositionPage('disintegrating')}
+              onClick={() => setToCompositionPage("disintegrating")}
             />
-            <CompositionPreview data={Comp.southernCross}
+          </Row>
+          <Row>
+            <CompositionPreview
+              data={Comp.southernCross}
               img={SouthernCross}
               alt="ACSMF 2017 logo."
-              onClick={() => setToCompositionPage('southernCross')}
+              onClick={() => setToCompositionPage("southernCross")}
             />
-          </Row>
-          <Row>
-            <CompositionPreview data={Comp.lynx}
+            <CompositionPreview
+              data={Comp.lynx}
               img={Lynx}
               alt="Close-up of a lynx's eye."
-              onClick={() => setToCompositionPage('lynx')}
-            />
-            <CompositionPreview data={Comp.concerto}
-              img={Concerto}
-              alt="Violin scroll on top of manuscript paper."
-              onClick={() => setToCompositionPage('concerto')}
+              onClick={() => setToCompositionPage("lynx")}
             />
           </Row>
           <Row>
-            <CompositionPreview data={Comp.clouds}
+            <CompositionPreview
+              data={Comp.concerto}
+              img={Concerto}
+              alt="Violin scroll on top of manuscript paper."
+              onClick={() => setToCompositionPage("concerto")}
+            />
+            <CompositionPreview
+              data={Comp.clouds}
               img={Fanfare}
               alt="Artology fanfare competition logo."
-              onClick={() => setToCompositionPage('clouds')}
+              onClick={() => setToCompositionPage("clouds")}
             />
           </Row>
         </Gallery>
@@ -135,6 +149,6 @@ const Compositions = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default Compositions;
