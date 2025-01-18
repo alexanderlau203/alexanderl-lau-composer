@@ -17,6 +17,7 @@ import ViolinAndCello from "../assets/ViolinAndCello.jpeg";
 import { MainTitle } from "../components/PageTitles";
 import Comp from "../assets/Compositions";
 import { fadeIn } from "react-animations";
+import DontMakeTooMuchNoise from "../assets/DontMakeTooMuchNoise.png";
 
 const Body = styled.div`
   & {
@@ -60,6 +61,75 @@ const Row = styled.div`
   }
 `;
 
+const compositionData = [
+  {
+    data: Comp.dontMakeTooMuchNoise,
+    img: DontMakeTooMuchNoise,
+    alt: "A chinese teapot being smashed with a dark blue background.",
+    path: "dontMakeTooMuchNoise",
+  },
+  {
+    data: Comp.narcissistTrap,
+    img: NarcissistTrap,
+    alt: "The Narcissist Trap album cover.",
+    path: "narcissistTrap",
+  },
+  {
+    data: Comp.mysteryFriends,
+    img: ViolinAndCello,
+    alt: "Violin and Cello book cover.",
+    path: "mysteryFriends",
+  },
+  {
+    data: Comp.prelude,
+    img: PreludePensive,
+    alt: "Lit candle and Christmas pinecones.",
+    path: "prelude",
+  },
+  {
+    data: Comp.asymptote,
+    img: BreakingTheAsymptote,
+    alt: "Breaking the Asymptote 2021 concert coverpage.",
+    path: "asymptote",
+  },
+  {
+    data: Comp.jacaranda,
+    img: JacarandaSnow,
+    alt: "Jacaranda Snow book cover illustration.",
+    path: "jacaranda",
+  },
+  {
+    data: Comp.disintegrating,
+    img: DisintegratingCello,
+    alt: "Grayscale close up on cellist playing the cello.",
+    path: "disintegrating",
+  },
+  {
+    data: Comp.southernCross,
+    img: SouthernCross,
+    alt: "ACSMF 2017 logo.",
+    path: "southernCross",
+  },
+  {
+    data: Comp.lynx,
+    img: Lynx,
+    alt: "Close-up of a lynx's eye.",
+    path: "lynx",
+  },
+  {
+    data: Comp.concerto,
+    img: Concerto,
+    alt: "Violin scroll on top of manuscript paper.",
+    path: "concerto",
+  },
+  {
+    data: Comp.clouds,
+    img: Fanfare,
+    alt: "Artology fanfare competition logo.",
+    path: "clouds",
+  },
+];
+
 const Compositions = () => {
   let navigate = useNavigate();
   const [toCompositionPage, setToCompositionPage] = React.useState(undefined);
@@ -74,76 +144,34 @@ const Compositions = () => {
       <Body>
         <MainTitle>Compositions</MainTitle>
         <Gallery>
-          <Row>
-            <CompositionPreview
-              data={Comp.narcissistTrap}
-              img={NarcissistTrap}
-              alt="The Narcissist Trap album cover."
-              onClick={() => setToCompositionPage("narcissistTrap")}
-            />
-            <CompositionPreview
-              data={Comp.mysteryFriends}
-              img={ViolinAndCello}
-              alt="Violin and Cello book cover."
-              onClick={() => setToCompositionPage("mysteryFriends")}
-            />
-          </Row>
-          <Row>
-            <CompositionPreview
-              data={Comp.prelude}
-              img={PreludePensive}
-              alt="Lit candle and Christmas pinecones."
-              onClick={() => setToCompositionPage("prelude")}
-            />
-            <CompositionPreview
-              data={Comp.asymptote}
-              img={BreakingTheAsymptote}
-              alt="Breaking the Asymptote 2021 concert coverpage."
-              onClick={() => setToCompositionPage("asymptote")}
-            />
-          </Row>
-          <Row>
-            <CompositionPreview
-              data={Comp.jacaranda}
-              img={JacarandaSnow}
-              alt="Jacaranda Snow book cover illustration."
-              onClick={() => setToCompositionPage("jacaranda")}
-            />
-            <CompositionPreview
-              data={Comp.disintegrating}
-              img={DisintegratingCello}
-              instrumentation="Piano quintet"
-              onClick={() => setToCompositionPage("disintegrating")}
-            />
-          </Row>
-          <Row>
-            <CompositionPreview
-              data={Comp.southernCross}
-              img={SouthernCross}
-              alt="ACSMF 2017 logo."
-              onClick={() => setToCompositionPage("southernCross")}
-            />
-            <CompositionPreview
-              data={Comp.lynx}
-              img={Lynx}
-              alt="Close-up of a lynx's eye."
-              onClick={() => setToCompositionPage("lynx")}
-            />
-          </Row>
-          <Row>
-            <CompositionPreview
-              data={Comp.concerto}
-              img={Concerto}
-              alt="Violin scroll on top of manuscript paper."
-              onClick={() => setToCompositionPage("concerto")}
-            />
-            <CompositionPreview
-              data={Comp.clouds}
-              img={Fanfare}
-              alt="Artology fanfare competition logo."
-              onClick={() => setToCompositionPage("clouds")}
-            />
-          </Row>
+          {compositionData.map((_, idx) => {
+            return idx % 2 === 0 ? (
+              <Row>
+                {compositionData[idx] && (
+                  <CompositionPreview
+                    data={compositionData[idx].data}
+                    img={compositionData[idx].img}
+                    alt={compositionData[idx].alt}
+                    onClick={() =>
+                      setToCompositionPage(compositionData[idx].path)
+                    }
+                  />
+                )}
+                {compositionData[idx + 1] && (
+                  <CompositionPreview
+                    data={compositionData[idx + 1].data}
+                    img={compositionData[idx + 1].img}
+                    alt={compositionData[idx + 1].alt}
+                    onClick={() =>
+                      setToCompositionPage(compositionData[idx + 1].path)
+                    }
+                  />
+                )}
+              </Row>
+            ) : (
+              <></>
+            );
+          })}
         </Gallery>
       </Body>
       <Footer />

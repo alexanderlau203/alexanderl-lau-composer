@@ -18,6 +18,7 @@ import Concerto from "../assets/Concerto.jpeg";
 import Fanfare from "../assets/CloudsBackground.JPG";
 import ViolinAndCello from "../assets/ViolinAndCelloBackground.png";
 import NarcissistTrap from "../assets/NarcissistTrapBackground.png";
+import DontMakeTooMuchNoise from "../assets/DontMakeTooMuchNoiseBackground.png";
 import { fadeIn } from "react-animations";
 
 // Audio recordings
@@ -38,6 +39,11 @@ import AdagioPiano from "../downloads/Adagio Piano Version.mp3";
 import CopacabanaAudio from "../downloads/Dinner at the Copacabana Palace.mp3";
 import RhapsodyAudio from "../downloads/Rhapsody for a Midnight Bar Hop.mp3";
 import GaslightAudio from "../downloads/Gaslight Tango.mp3";
+import SisterhoodAudio from "../downloads/Sisterhood of the Kerbside Recycling.wav";
+import BipolarityAudio from "../downloads/Bipolarity of Dimsum.wav";
+import FeatherdusterAudio from "../downloads/Featherduster Slapstick.wav";
+import SlicedFruitAudio from "../downloads/Sliced Fruit Therapy.wav";
+import LiberationAudio from "../downloads/Liberation of the Umbrella Army.wav";
 
 // Scores
 import PreludeScore from "../downloads/Christmas Prelude - Full Score.pdf";
@@ -58,6 +64,12 @@ import CopacabanaScore from "../downloads/The Narcissist Trap mvmt I - Full Scor
 import RhapsodyScore from "../downloads/The Narcissist Trap mvmt II - Full Score.pdf";
 import GaslightScore from "../downloads/The Narcissist Trap mvmt III - Full Score.pdf";
 import NarcissistProgramNotes from "../downloads/Diary of a Narcissist - Program Notes.docx.pdf";
+import SisterhoodScore from "../downloads/I. Sisterhood of the Kerbside Recycling - Full Score.pdf";
+import BipolarityScore from "../downloads/II. The Bipolarity of Dim Sum - Full Score.pdf";
+import FeatherdusterScore from "../downloads/III. Feather Duster Slapstick - Full Score.pdf";
+import SlicedFruitScore from "../downloads/IV. Sliced Fruit Therapy - Full Score.pdf";
+import LiberationScore from "../downloads/V. Liberation of the Umbrella Army - Full Score.pdf";
+import DontMakeTooMuchNoiseNotes from "../downloads/Don’t Make Too Much Noise - Program Notes.pdf";
 
 console.log(PreludeAudio);
 console.log(AdagioPiano);
@@ -196,6 +208,24 @@ const CompositionDetails = (props) => {
             AdagioScore,
             AllegroPianoScore,
             AdagioPianoScore,
+          ]);
+          break;
+        case "dontMakeTooMuchNoise":
+          setImg(DontMakeTooMuchNoise);
+          setAudio([
+            SisterhoodAudio,
+            BipolarityAudio,
+            FeatherdusterAudio,
+            SlicedFruitAudio,
+            LiberationAudio,
+          ]);
+          setScores([
+            DontMakeTooMuchNoiseNotes,
+            SisterhoodScore,
+            BipolarityScore,
+            FeatherdusterScore,
+            SlicedFruitScore,
+            LiberationScore,
           ]);
           break;
         default:

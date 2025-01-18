@@ -1,4 +1,26 @@
 {
+  "dontMakeTooMuchNoise": {
+    "name": "Don't Make Too Much Noise",
+    "year": "2024",
+    "premiere": "Alex Lau (vln.), Max Owen (vln. & percussion), Luke Poier (vc.), Eric Rong (pno.) & Yilan Yu (percussion), Trackdown Studios Moore Park, NSW, Aus; Oct 2024.",
+    "instrumentation": "Piano quartet (2 violins) & percussion",
+    "description": "Don’t Make Too Much Noise is a collection of five musical soundscapes that explore the often unspoken experiences of a Chinese childhood. Step into a world where the most unexpected emerges from the quietest of moments.",
+    "audioTitles": [
+      "Sisterhood of the Kerbside Recycling",
+      "Bipolarity of Dim Sum",
+      "Feather Duster Slapstick",
+      "Sliced Fruit Therapy",
+      "Liberation of the Umbrella Army"
+    ],
+    "scoreTitles": [
+      "Program Notes",
+      "Sisterhood of the Kerbside Recycling - Full Score",
+      "Bipolarity of Dim Sum - Full Score",
+      "Feather Duster Slapstick - Full Score",
+      "Sliced Fruit Therapy - Full Score",
+      "Liberation of the Umbrella Army - Full Score"
+    ]
+  },
   "narcissistTrap": {
     "name": "The Narcissist Trap",
     "year": "2022",

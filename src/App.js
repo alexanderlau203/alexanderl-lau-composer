@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Compositions from "./pages/Compositions";
 import CompositionDetails from "./pages/CompositionDetails";
 
+// App
 function App() {
   return (
     <Routes>

@@ -1,17 +1,17 @@
-import React from 'react';
-import Header from '../components/Header'
-import styled, { keyframes } from 'styled-components'
-import Footer from '../components/Footer';
-import { MainTitle } from '../components/PageTitles';
-import { TextInputGroup, TextAreaGroup } from '../components/FormGroup';
-import CoverPhoto from '../assets/Contact.jpeg';
-import PrimaryButton from '../components/PrimaryButton';
-import emailjs from 'emailjs-com';
-import Spinner from 'react-bootstrap/Spinner'
-import Validator from '../utils/Validator'
-import { fadeIn } from 'react-animations';
+import React from "react";
+import Header from "../components/Header";
+import styled, { keyframes } from "styled-components";
+import Footer from "../components/Footer";
+import { MainTitle } from "../components/PageTitles";
+import { TextInputGroup, TextAreaGroup } from "../components/FormGroup";
+import CoverPhoto from "../assets/Contact.jpg";
+import PrimaryButton from "../components/PrimaryButton";
+import emailjs from "emailjs-com";
+import Spinner from "react-bootstrap/Spinner";
+import Validator from "../utils/Validator";
+import { fadeIn } from "react-animations";
 
-const v = new Validator()
+const v = new Validator();
 
 const Body = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ const Body = styled.div`
   @media (max-width: 450px) {
     margin: 0px;
   }
-`
+`;
 
 const ContactForm = styled.div`
   width: 50%;
@@ -37,11 +37,11 @@ const ContactForm = styled.div`
     width: 100%;
     padding: 25px 50px;
   }
-`
+`;
 
 const FormWrapper = styled.div`
   margin-top: 80px;
-`
+`;
 
 const Form = styled.div`
   display: flex;
@@ -49,7 +49,7 @@ const Form = styled.div`
   height: 480px;
   justify-content: space-between;
   max-width: 500px;
-`
+`;
 
 const PhotoWrapper = styled.div`
   & {
@@ -70,11 +70,11 @@ const PhotoWrapper = styled.div`
     width: 100%;
     margin-top: 100px;
   }
-`
+`;
 
 const Alert = styled.div`
-  color: ${props => props.alertType === 'danger' ? '#b11717' : '#1aa416'}
-`
+  color: ${(props) => (props.alertType === "danger" ? "#b11717" : "#1aa416")};
+`;
 
 const FormSubmissionWrapper = styled.div`
   & {
@@ -86,45 +86,45 @@ const FormSubmissionWrapper = styled.div`
   & .spinner-border {
     margin-left: 10px;
   }
-`
+`;
 
 const Contact = () => {
-  const [name, setName] = React.useState('')
-  const [email, setEmail] = React.useState('')
-  const [subject, setSubject] = React.useState('')
-  const [message, setMessage] = React.useState('')
-  const [alertMessage, setAlertMessage] = React.useState(undefined)
-  const [alertType, setAlertType] = React.useState('danger')
-  const [loading, setLoading] = React.useState(false)
-  const [disableButton, setDisableButton] = React.useState(false)
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [alertMessage, setAlertMessage] = React.useState(undefined);
+  const [alertType, setAlertType] = React.useState("danger");
+  const [loading, setLoading] = React.useState(false);
+  const [disableButton, setDisableButton] = React.useState(false);
 
   const validateParams = () => {
-    let isValid = false
+    let isValid = false;
     if (v.isEmpty(name)) {
-      setAlertMessage('Name is a mandatory field.')
+      setAlertMessage("Name is a mandatory field.");
     } else if (v.isEmpty(email)) {
-      setAlertMessage('Email is a mandatory field.')
+      setAlertMessage("Email is a mandatory field.");
     } else if (!v.validateEmail(email)) {
-      setAlertMessage('Email must be valid.')
+      setAlertMessage("Email must be valid.");
     } else if (v.isEmpty(subject)) {
-      setAlertMessage('Subject is a mandatory field')
+      setAlertMessage("Subject is a mandatory field");
     } else if (v.isEmpty(message)) {
-      setAlertMessage('Message is a mandatory field.')
+      setAlertMessage("Message is a mandatory field.");
     } else {
-      isValid = true
+      isValid = true;
     }
 
-    return isValid
-  }
+    return isValid;
+  };
 
   /**
    * Send an email from the frontend to the composer himself!
    */
   const sendEmail = async () => {
     // Validate all parameters
-    setAlertMessage(undefined)
+    setAlertMessage(undefined);
     if (!validateParams()) {
-      return
+      return;
     }
 
     // Prepare the email template parameters
@@ -132,99 +132,84 @@ const Contact = () => {
       from_name: name,
       subject: subject,
       sender_email: email,
-      message: message
-    }
+      message: message,
+    };
 
     // Make the API call
-    setLoading(true)
-    setDisableButton(true)
+    setLoading(true);
+    setDisableButton(true);
     const response = await emailjs.send(
       process.env.REACT_APP_SERVICE_ID,
       process.env.REACT_APP_TEMPLATE_ID,
       templateParams,
       process.env.REACT_APP_USER_ID
-    )
+    );
 
     // Handle response
     if (response.status === 200) {
-      setAlertMessage('Success! Your email was sent.')
-      setAlertType('success')
+      setAlertMessage("Success! Your email was sent.");
+      setAlertType("success");
     } else {
-      setDisableButton(false)
-      setAlertMessage(`Error! We couldn't send your email. ${response.text}`)
+      setDisableButton(false);
+      setAlertMessage(`Error! We couldn't send your email. ${response.text}`);
     }
-    setLoading(false)
-  } 
+    setLoading(false);
+  };
 
   return (
     <section id="contact">
       <Header />
-        <Body>
+      <Body>
+        {/* Form for contact */}
+        <ContactForm>
+          <FormWrapper>
+            {/* Contact title and paragraph text */}
+            <MainTitle>Contact</MainTitle>
+            {/* https://medium.com/@patienceadajah/how-to-send-emails-from-a-react-application-without-a-backend-server-1dd8718ceedd */}
+            <p>
+              Feel free to reach out to me! I’m always looking to collaborate or
+              work on a new project. You can also contact me to purchase any
+              sheet music of my compositions or just ask questions.
+            </p>
 
-          {/* Form for contact */}
-          <ContactForm>
-            <FormWrapper>
+            {/* Text inputs */}
+            <Form>
+              <TextInputGroup label="Name *" onChange={setName} />
+              <TextInputGroup label="Email *" onChange={setEmail} />
+              <TextInputGroup label="Subject *" onChange={setSubject} />
+              <TextAreaGroup label="Message *" onChange={setMessage} />
 
-              {/* Contact title and paragraph text */}
-              <MainTitle>Contact</MainTitle>
-              {/* https://medium.com/@patienceadajah/how-to-send-emails-from-a-react-application-without-a-backend-server-1dd8718ceedd */}
-              <p>
-                Feel free to reach out to me! I’m always looking to collaborate or work on a new 
-                project. You can also contact me to purchase any sheet music of my compositions 
-                or just ask questions.
-              </p>
+              {/* Alert message */}
+              {alertMessage !== undefined && (
+                <Alert alertType={alertType}>{alertMessage}</Alert>
+              )}
 
-              {/* Text inputs */}
-              <Form>
-                <TextInputGroup label="Name *"
-                  onChange={setName}
-                />
-                <TextInputGroup label="Email *"
-                  onChange={setEmail}
-                />
-                <TextInputGroup label="Subject *"
-                  onChange={setSubject}
-                />
-                <TextAreaGroup label="Message *" 
-                  onChange={setMessage}
-                />
+              {/* Send email button and spinner */}
+              <FormSubmissionWrapper>
+                <PrimaryButton
+                  onClick={() => sendEmail()}
+                  disabled={disableButton}
+                >
+                  Send email
+                </PrimaryButton>
+                {loading && (
+                  <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </Spinner>
+                )}
+              </FormSubmissionWrapper>
+            </Form>
+          </FormWrapper>
+        </ContactForm>
 
-                {/* Alert message */}
-                {
-                  alertMessage !== undefined &&
-                  <Alert alertType={alertType}>
-                    {alertMessage}
-                  </Alert>
-                }
-
-                {/* Send email button and spinner */}
-                <FormSubmissionWrapper>
-                  <PrimaryButton onClick={() => sendEmail()} 
-                    disabled={disableButton}
-                  >
-                    Send email
-                  </PrimaryButton>
-                  {
-                    loading &&
-                    <Spinner animation="border" role="status">
-                      <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-                  }
-                </FormSubmissionWrapper>
-              </Form>
-            </FormWrapper>
-          </ContactForm>
-
-          {/* Cover photo */}
-          <PhotoWrapper>
-            <img src={CoverPhoto}
-              alt="Composer Alex Lau playing the violin."
-            />
-          </PhotoWrapper>
-        </Body>
+        {/* Cover photo */}
+        <PhotoWrapper>
+          <img src={CoverPhoto} alt="Composer Alex Lau playing the violin." />
+        </PhotoWrapper>
+      </Body>
       <Footer />
     </section>
   );
-}
+};
 
 export default Contact;
